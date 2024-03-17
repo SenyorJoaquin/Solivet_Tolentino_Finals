@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-image: url('../img/bg2.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.navbar {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 10vh;
+	width: 100%;
+	background-color: rgba(176, 10, 210, 0.324);
+	backdrop-filter: blur(10px);
+	box-shadow: .5rem 0 2rem rgba(0, 0, 0, 0.3);
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar label{
+	color: white;
+	font-weight: bolder;
+	font-style: normal;
+	line-height: 10vh;
+	margin-left: 5rem;
+	font-size: 2.3rem;
+}
+
+.navbar i{
+	color: white;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 10vh;
+	margin-right: 5rem;
+	font-size: 2rem;
+}
+
+.navbar i:hover{
+	color: rgb(172, 172, 172);
+}
+
+/* TABLE DESIGN */
+
+.employee-table {
+	/* float: left; */
+	width: 95%;
+	background-color: red;
+	margin: 4vh auto;
+	padding: 1rem;
+	border-radius: 1rem;
+
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.employee-table .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: rgba(162, 32, 227);
+	backdrop-filter: blur(10px);
+	border-radius: .9rem .9rem 0 0;
+	padding: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+}
+
+.employee-table .icon-header-action {
+	font-size: 1.4rem;
+	padding: 0 .5rem;
+}
+
+.employee-table .icon-header-action:hover {
+	color: rgb(255, 0, 183);
+}
+
+.employee-table table {
+	width:100%;
+	text-align: center;
+	box-shadow: 0 .1rem 2rem rgba(0, 0, 0, 0.2);
+
+	border-radius: 0 0 .9rem .9rem ;
+	border-collapse: collapse;
+}
+
+.employee-table thead {
+	text-align: center;
+	border: none;
+	background-color: rgba(199, 128, 235, 0.705);
+	backdrop-filter: blur(10px);
+}
+
+.employee-table th {
+	padding: 8px;
+        border: 1px solid #dddddd;
+        text-align: center;
+}
+
+.employee-table input { 
+	cursor: pointer;
+}
+
+.employee-table .icon-action { 
+	cursor: pointer;
+	padding: 0 .3rem;
+}
+
+.employee-table .icon-action:hover { 
+	color: rgb(117, 117, 117);
+}
+
+
+.employee-table td {
+	padding: 8px;
+	border: 1px solid #dddddd;
+	text-align: center;
+}
+
+tr:nth-child(even) {
+	background: rgba(199, 128, 235, 0.15);
+}
+
+@media screen and (max-width: 990px) {
+	th, td {
+		font-size: .8rem;
+	}
+}
+
+@media screen and (max-width: 835px	) {
+
+	thead {
+		display: none;
+	}
+
+	tr {
+		border-bottom: 1px solid #dddddd;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	td {
+		display: block;
+		text-align: left;
+	}
+
+	td:before {
+		content: attr(data-label);
+		font-weight: bold;
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	tr td:nth-child(1) {
+		display: none;
+	}
+
+	tr td {
+		background-color: rgba(199, 128, 235, 0.01);
+		backdrop-filter: blur(5px);
+	}
+
+	tr td:nth-child(10) {
+		font-size: 1.5rem;
+		background-color: rgba(25, 223, 25, 0.5)
+	}
+
+	#btn-delete {
+		display: none;
+	}
+}
